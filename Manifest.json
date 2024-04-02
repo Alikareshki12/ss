@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "دانلود رزومه",
+  "version": "1.0",
+  "description": "توضیحات اکستنشن",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/*"],
+      "js": ["code.jquery.min.js","content.js"]
+    }
+  ],
+  "permissions" : ["downloads"]
+}
